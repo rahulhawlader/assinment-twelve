@@ -1,0 +1,56 @@
+[
+    {
+        "id": " 1",
+        "name": "bicycle bell",
+        "description": "aas sasas s sas sasas sasas s sassas  sasa sas sasss  asass sa ssas ",
+        "minimum-order": 400,
+        "available Quantity": 5000,
+        "price": 50,
+        "img": "https://i.ibb.co/CvhhPhs/bicycle-bell.webp"
+    },
+    {
+        "id": " 2",
+        "name": "bicycle BlendGrip_large",
+        "description": "aas sasas s sas sasas sasas s sassas  sasa sas sasss  asass sa ssas",
+        "minimum-order": 280,
+        "available Quantity": 2500,
+        "price": 180,
+        "img": "https://i.ibb.co/mvwK6x4/bicycle-Blend-Grip-large.webp"
+    },
+    {
+        "id": " 3",
+        "name": "Bicycle Cup",
+        "description": "aas sasas s sas sasas sasas s sassas  sasa sas sasss  asass sa ssas",
+        "minimum-order": 250,
+        "available Quantity": 4000,
+        "price": 150,
+        "img": "https://i.ibb.co/g6P1pbG/Bicycle-Cup.webp"
+    },
+    {
+        "id": " 4",
+        "name": "Bicycle Hpedal",
+        "description": "aas sasas s sas sasas sasas s sassas  sasa sas sasss  asass sa ssas",
+        "minimum-order": 320,
+        "available Quantity": 4800,
+        "price": 100,
+        "img": "https://i.ibb.co/kH4P8x5/Bicycle-Hpedal.webp"
+    },
+    {
+        "id": " 5",
+        "name": "bicycle Water botle",
+        "description": "aas sasas s sas sasas sasas s sassas  sasa sas sasss  asass sa ssas",
+        "minimum-order": 400,
+        "available Quantity": 5000,
+        "price": 80,
+        "img": "https://i.ibb.co/hsbS1Bm/bicycle-Water-botle.webp"
+    },
+    {
+        "id": " 6",
+        "name": "steel spiral Cable",
+        "description": "aas sasas s sas sasas sasas s sassas  sasa sas sasss  asass sa ssas",
+        "minimum-order": 350,
+        "available Quantity": 4500,
+        "price": 90,
+        "img": "https://i.ibb.co/yNtZvPm/steel-spiral-Cable.webp"
+    }
+]
