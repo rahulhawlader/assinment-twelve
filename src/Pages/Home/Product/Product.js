@@ -7,11 +7,11 @@ const Product = ({ product }) => {
 
 
     const navigateToPurchase = (id) => {
-        navigate(`/purchase/${id}`)
+        navigate(`/product/${id}`)
     }
 
     return (
-        <div class="card w-96 bg-base-100 shadow-xl my-4">
+        <div class="card bg-base-100 shadow-xl my-4">
             <figure class="px-10 pt-10">
                 <img src={img} alt="Shoes" class="rounded-xl" />
             </figure>
