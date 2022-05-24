@@ -25,7 +25,7 @@ const Contack = () => {
                     placeholder='Your message'
                     rows={6}
                 ></textarea>
-                <button type="button" class="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold ...">
+                <button type="button" className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold ...">
                     get Start
                 </button>
             </div>
