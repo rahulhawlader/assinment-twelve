@@ -19,6 +19,7 @@ import NotFound from './Pages/Shared/NotFound';
 import DashBoard from './Pages/DashBoard/DashBoard';
 import MyOrders from './Pages/DashBoard/MyOrders';
 import Review from './Pages/DashBoard/Review';
+import Users from './Pages/DashBoard/Users';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         }>
           <Route index element={<MyOrders />} ></Route>
           <Route path="/dashboard/myreview" element={<Review />} ></Route>
+          <Route path="/dashboard/users" element={<Users />} ></Route>
 
         </Route>
         <Route path="/login" element={<Login />}></Route>
