@@ -57,10 +57,14 @@ const Purchase = () => {
         }
 
         const orderForm = {
+
             name: e.target.name.value,
             email: e.target.email.value,
+            order: e.target.order.value,
             address: e.target.address.value,
+            price: e.target.price.value,
             phone: e.target.phone.value,
+
             quantity: newQuantity
         }
         console.log(orderForm);
@@ -121,12 +125,12 @@ const Purchase = () => {
                             <label htmlFor="email" className='mb-2'>Email</label>
                             <input type="email" name='email' id='email' value={user?.email} disabled placeholder="email" class="input input-bordered w-full max-w-xs" required />
                         </div>
-
                         <div class="form-control mx-auto text-left w-full max-w-xs">
-                            <label htmlFor="address" className='my-2'>name</label>
-                            <input type="text" value={name} name='name' id='name'
-                                class="input input-bordered w-full max-w-xs" disabled />
+                            <label htmlFor="order" className='mb-2'>Order</label>
+                            <input type="text" name='order' id='order' value={name} disabled placeholder="order" class="input input-bordered w-full max-w-xs" required />
                         </div>
+
+
 
 
                         <div class="form-control mx-auto text-left w-full max-w-xs">
@@ -137,6 +141,12 @@ const Purchase = () => {
                             <label htmlFor="Phone" className='my-2'>Phone</label>
                             <input type="number" name='phone' id='phone' class="input input-bordered w-full max-w-xs" required />
                         </div>
+                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                            <label htmlFor="Price" className='my-2'>Price</label>
+                            <input type="number" name='price' id='price'
+                                value={price} class="input input-bordered w-full max-w-xs" disabled />
+                        </div>
+
                         <div class="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="quantity" className='my-2'>Order Quantity <span style={{ color: "gray" }}>(minimum {minimumOrder} pcs.)</span></label>
                             <input onChange={handleQuantity} placeholder={minimumOrder} ref={quantityRef} type="number" name='quantity' id='quantity' class="input input-bordered w-full max-w-xs" />
