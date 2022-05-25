@@ -16,6 +16,9 @@ import Footer from './Pages/Shared/Footer/Footer';
 
 import Navber from './Pages/Shared/Navber/Navber';
 import NotFound from './Pages/Shared/NotFound';
+import DashBoard from './Pages/DashBoard/DashBoard';
+import MyOrders from './Pages/DashBoard/MyOrders';
+import Review from './Pages/DashBoard/Review';
 
 
 function App() {
@@ -30,7 +33,24 @@ function App() {
         }></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/portFolio" element={<PortFolio />}></Route>
-        <Route path="/review" element={<MyReview />}></Route>
+        <Route path="/review/:reviewId" element={
+          <RequireAuth>
+
+            <MyReview />
+          </RequireAuth>
+
+        }></Route>
+        <Route path="/dashboard" element={
+          <RequireAuth>
+
+            <DashBoard />
+          </RequireAuth>
+
+        }>
+          <Route index element={<MyOrders />} ></Route>
+          <Route path="/dashboard/myreview" element={<Review />} ></Route>
+
+        </Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="*" element={<NotFound></NotFound>} ></Route>
