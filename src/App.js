@@ -20,6 +20,7 @@ import DashBoard from './Pages/DashBoard/DashBoard';
 import MyOrders from './Pages/DashBoard/MyOrders';
 import MyReviews from './Pages/DashBoard/MyReviews';
 import AllUsers from './Pages/DashBoard/AllUsers';
+import RequireAdmin from './Pages/Login/Login/RequireAdmin';
 
 
 
@@ -56,7 +57,9 @@ function App() {
 
           <Route index element={<MyOrders />}></Route>
           <Route path="reviews" element={<MyReviews />}></Route>
-          <Route path="allUsers" element={<AllUsers />}></Route>
+          <Route path="allUsers" element={<RequireAdmin>
+            <AllUsers />
+          </RequireAdmin>}></Route>
 
         </Route>
 
