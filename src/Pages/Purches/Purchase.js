@@ -100,7 +100,7 @@ const Purchase = () => {
 
         <div className='grid sm:grid-cols-1 lg:grid-cols-2 '>
             <div className=" card w-96 bg-base-100 shadow-xl bg-pink-700 text-black sm:mt-2 ">
-                <div class="card-body">
+                <div className="card-body">
                     <figure><img src={img} alt="" /></figure>
                     <h2 className="text-center card-title ">Name: {name}</h2>
                     <p className='text-center'>Description:{description}</p>
@@ -112,44 +112,44 @@ const Purchase = () => {
             </div>
             <div className='mx-auto  w-4/5 lg:w-1/2 mt-8 '>
                 <h1 className='font-bold text-center text-3xl mt-3'>Order Now</h1>
-                <div class="card mx-auto mt-3 p-2 bg-base-100 shadow-xl bg-white">
+                <div className="card mx-auto mt-3 p-2 bg-base-100 shadow-xl bg-white">
                     <form onSubmit={handleSubmit}>
-                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                        <div className="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="name" className='my-2'>Name</label>
-                            <input type="text" name='name' id='name' placeholder="name" value={user?.displayName} disabled class="input input-bordered w-full max-w-xs" required />
-                            <label class="label">
-                                {/* <span class="label-text-alt">Alt label</span> */}
+                            <input type="text" name='name' id='name' placeholder="name" value={user?.displayName} disabled className="input input-bordered w-full max-w-xs" required />
+                            <label className="label">
+                                {/* <span className="label-text-alt">Alt label</span> */}
                             </label>
                         </div>
-                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                        <div className="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="email" className='mb-2'>Email</label>
-                            <input type="email" name='email' id='email' value={user?.email} disabled placeholder="email" class="input input-bordered w-full max-w-xs" required />
+                            <input type="email" name='email' id='email' value={user?.email} disabled placeholder="email" className="input input-bordered w-full max-w-xs" required />
                         </div>
-                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                        <div className="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="order" className='mb-2'>Order</label>
-                            <input type="text" name='order' id='order' value={name} disabled placeholder="order" class="input input-bordered w-full max-w-xs" required />
+                            <input type="text" name='order' id='order' value={name} disabled placeholder="order" className="input input-bordered w-full max-w-xs" required />
                         </div>
 
 
 
 
-                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                        <div className="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="address" className='my-2 '>Address</label>
-                            <input type="text" name='address' id='address' class="input input-bordered w-full max-w-xs" required />
+                            <input type="text" name='address' id='address' className="input input-bordered w-full max-w-xs" required />
                         </div>
-                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                        <div className="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="Phone" className='my-2'>Phone</label>
-                            <input type="number" name='phone' id='phone' class="input input-bordered w-full max-w-xs" required />
+                            <input type="number" name='phone' id='phone' className="input input-bordered w-full max-w-xs" required />
                         </div>
-                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                        <div className="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="Price" className='my-2'>Price</label>
                             <input type="number" name='price' id='price'
-                                value={price} class="input input-bordered w-full max-w-xs" disabled />
+                                value={price} className="input input-bordered w-full max-w-xs" disabled />
                         </div>
 
-                        <div class="form-control mx-auto text-left w-full max-w-xs">
+                        <div className="form-control mx-auto text-left w-full max-w-xs">
                             <label htmlFor="quantity" className='my-2'>Order Quantity <span style={{ color: "gray" }}>(minimum {minimumOrder} pcs.)</span></label>
-                            <input onChange={handleQuantity} placeholder={minimumOrder} ref={quantityRef} type="number" name='quantity' id='quantity' class="input input-bordered w-full max-w-xs" />
+                            <input onChange={handleQuantity} placeholder={minimumOrder} ref={quantityRef} type="number" name='quantity' id='quantity' className="input input-bordered w-full max-w-xs" />
                         </div>
 
                         <input disabled={btnDisable} type="submit" value="PLACE ORDER" className='btn btn-primary form-control mx-auto text-left w-full max-w-xs mt-3' />

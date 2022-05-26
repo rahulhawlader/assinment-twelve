@@ -18,8 +18,13 @@ import Navber from './Pages/Shared/Navber/Navber';
 import NotFound from './Pages/Shared/NotFound';
 import DashBoard from './Pages/DashBoard/DashBoard';
 import MyOrders from './Pages/DashBoard/MyOrders';
-import Review from './Pages/DashBoard/Review';
-import Users from './Pages/DashBoard/Users';
+import MyReviews from './Pages/DashBoard/MyReviews';
+import AllUsers from './Pages/DashBoard/AllUsers';
+
+
+
+
+
 
 
 function App() {
@@ -48,11 +53,19 @@ function App() {
           </RequireAuth>
 
         }>
-          <Route index element={<MyOrders />} ></Route>
-          <Route path="/dashboard/myreview" element={<Review />} ></Route>
-          <Route path="/dashboard/users" element={<Users />} ></Route>
+
+          <Route index element={<MyOrders />}></Route>
+          <Route path="reviews" element={<MyReviews />}></Route>
+          <Route path="allUsers" element={<AllUsers />}></Route>
 
         </Route>
+
+
+
+
+
+
+
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="*" element={<NotFound></NotFound>} ></Route>
