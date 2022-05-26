@@ -13,10 +13,17 @@ const UserRow = ({ user, refetch }) => {
 
 
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 403) {
+                    toast.error('faild to  make an admin')
+                }
+                res.json()
+            })
             .then(data => {
-                refetch();
-                toast.success('successfully Made an admin')
+                if (data.modifiCount > 0) {
+                    refetch();
+                    toast.success('successfully Made an admin')
+                }
 
             })
 
