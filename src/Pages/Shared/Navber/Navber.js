@@ -16,9 +16,11 @@ const Navber = () => {
 
 
             <li><Link to="/myProfile">My Profile</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
             <li><Link to="/review">Reviews</Link></li>
+            <li><Link to="/portfolio">Portfolio</Link></li>
 
-            <li><Link to="/about">About</Link></li>
+
             {
                 user && <li><Link to="/dashboard">DashBoard</Link></li>
             }

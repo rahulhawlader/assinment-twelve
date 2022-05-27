@@ -19,7 +19,7 @@ const MyOrders = () => {
                 }
             })
                 .then(res => {
-                    console.log(res);
+
 
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
@@ -39,7 +39,7 @@ const MyOrders = () => {
     }, [user])
     return (
         <div>
-            <h2 className='text-2xl text-gray-400'>All orders: {orders.length}</h2>
+            <h2 className='text-2xl text-yellow-400'>My All orders: {orders.length}</h2>
 
             <div class="overflow-x-auto">
                 <table class="table w-full">
