@@ -5,7 +5,7 @@ const Review = ({ review }) => {
 
     const { name, location, rating, discription } = review
     return (
-        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+        <div className="card lg:max-w-lg bg-base-100 shadow-xl bg-white text-black">
             <div className="card-body">
                 <p>{
                     discription

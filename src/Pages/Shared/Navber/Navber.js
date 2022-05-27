@@ -15,7 +15,7 @@ const Navber = () => {
             <li><Link to="/home">Home</Link></li>
 
 
-            <li><Link to="/portFolio">PortFolio</Link></li>
+            <li><Link to="/myProfile">My Profile</Link></li>
             <li><Link to="/review">Reviews</Link></li>
 
             <li><Link to="/about">About</Link></li>

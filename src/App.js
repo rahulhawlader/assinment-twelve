@@ -23,6 +23,8 @@ import AllUsers from './Pages/DashBoard/AllUsers';
 import RequireAdmin from './Pages/Login/Login/RequireAdmin';
 import AddProduct from './Pages/DashBoard/AddProduct';
 import ManageProducts from './Pages/DashBoard/ManageProducts';
+import MyProfile from './Pages/My-Profile/MyProfile';
+import AdMyProfile from './Pages/DashBoard/AdMyProfile';
 
 
 
@@ -41,7 +43,7 @@ function App() {
           <RequireAuth><Purchase /></RequireAuth>
         }></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/portFolio" element={<PortFolio />}></Route>
+        <Route path="/myProfile" element={<MyProfile />}></Route>
         <Route path="/review/:reviewId" element={
           <RequireAuth>
 
@@ -59,6 +61,7 @@ function App() {
 
           <Route index element={<MyOrders />}></Route>
           <Route path="reviews" element={<MyReviews />}></Route>
+          <Route path="addprofile" element={<AdMyProfile />}></Route>
           <Route path="allUsers" element={<RequireAdmin>
             <AllUsers />
           </RequireAdmin>}></Route>
