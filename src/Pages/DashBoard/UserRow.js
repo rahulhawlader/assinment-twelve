@@ -22,7 +22,7 @@ const UserRow = ({ user, refetch }) => {
             .then(data => {
                 if (data.modifiCount > 0) {
                     refetch();
-                    toast('successfully Made an admin')
+                    toast.success('successfully Made an admin')
                 }
                 console.log(data);
             })
