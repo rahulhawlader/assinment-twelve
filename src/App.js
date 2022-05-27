@@ -25,6 +25,7 @@ import AddProduct from './Pages/DashBoard/AddProduct';
 import ManageProducts from './Pages/DashBoard/ManageProducts';
 import MyProfile from './Pages/My-Profile/MyProfile';
 import AdMyProfile from './Pages/DashBoard/AdMyProfile';
+import Pyment from './Pages/DashBoard/Pyment';
 
 
 
@@ -62,6 +63,7 @@ function App() {
           <Route index element={<MyOrders />}></Route>
           <Route path="reviews" element={<MyReviews />}></Route>
           <Route path="addprofile" element={<AdMyProfile />}></Route>
+          <Route path="pyment/:id" element={<Pyment />}></Route>
           <Route path="allUsers" element={<RequireAdmin>
             <AllUsers />
           </RequireAdmin>}></Route>
