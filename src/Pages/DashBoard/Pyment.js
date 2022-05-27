@@ -2,6 +2,17 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../../Pages/Login/Loading'
+import { loadStripe } from '@stripe/stripe-js';
+import {
+
+    Elements
+
+
+} from '@stripe/react-stripe-js';
+import CheckoutForm from './CheckoutForm';
+
+
+const stripePromise = loadStripe('pk_test_51L41anBQZYjn6cSxMdp5BdALVevV4wZo9Btuf6IhPfB7VawZNfAxgeqWt2FJtXX67dA2PKoWZB8nNa7VYeppexoT00MrTrs91h');
 
 const Pyment = () => {
     const { id } = useParams()
@@ -31,7 +42,9 @@ const Pyment = () => {
             <div class="card flex-shrink-0   w-50 max-w-md shadow-2xl bg-base-100">
                 <div class="card-body">
 
-
+                    <Elements stripe={stripePromise}>
+                        <CheckoutForm />
+                    </Elements>
 
                 </div>
             </div>
