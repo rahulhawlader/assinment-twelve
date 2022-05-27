@@ -12,7 +12,7 @@ const ProductRow = ({ product, index }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm('are you sure?')
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://fathomless-coast-23592.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

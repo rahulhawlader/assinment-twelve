@@ -18,7 +18,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${productId}`;
+        const url = `https://fathomless-coast-23592.herokuapp.com/product/${productId}`;
 
 
         fetch(url)
@@ -69,7 +69,7 @@ const Purchase = () => {
         }
         console.log(orderForm);
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://fathomless-coast-23592.herokuapp.com/order', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

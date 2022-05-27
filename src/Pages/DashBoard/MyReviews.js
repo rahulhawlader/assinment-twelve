@@ -7,7 +7,7 @@ const MyReviews = () => {
     const onSubmit = (data) => {
         console.log(data);
         // const url =;
-        fetch(`http://localhost:5000/review`, {
+        fetch(`https://fathomless-coast-23592.herokuapp.com/review`, {
             method: 'POST',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`,

@@ -9,7 +9,7 @@ const AddProduct = () => {
     const onSubmit = (data) => {
         console.log(data);
         // const url =;
-        fetch(`http://localhost:5000/product`, {
+        fetch(`https://fathomless-coast-23592.herokuapp.com/product`, {
             method: 'POST',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`,
