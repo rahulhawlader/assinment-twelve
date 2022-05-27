@@ -1,37 +1,18 @@
-import React from 'react';
-import people1 from '../../../../image/Review/people1.png'
-import people2 from '../../../../image/Review/people2.png'
-import people3 from '../../../../image/Review/people3.png'
+import React, { useEffect, useState } from 'react';
+
 import quote from '../../../../image/Review/quote.svg'
 import Review from '../../Review/Review';
 
+
 const Reviews = () => {
-    const reviews = [
-        {
-            _id: 1,
-            name: 'Winson Herry',
-            discription: 'This is a Awsome Products, in our country',
-            rating: '5',
-            location: 'california',
-            img: people1
-        },
-        {
-            _id: 2,
-            discription: 'This is a Awsome Products, in our country',
-            name: 'Winson Herry',
-            rating: '5',
-            location: 'california',
-            img: people2
-        },
-        {
-            _id: 3,
-            name: 'Winson Herry',
-            discription: 'This is a Awsome Products, in our country',
-            rating: '4',
-            location: 'california',
-            img: people3
-        },
-    ];
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+
     return (
         <section className='my-28'>
             <div className='flex justify-between'>
@@ -45,9 +26,10 @@ const Reviews = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
-                    reviews.map(review => <Review
+                    reviews.slice(0, 6).map(review => <Review
                         key={review._id}
                         review={review}
+
                     ></Review>)
                 }
             </div>

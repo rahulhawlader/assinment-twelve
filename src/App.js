@@ -22,6 +22,7 @@ import MyReviews from './Pages/DashBoard/MyReviews';
 import AllUsers from './Pages/DashBoard/AllUsers';
 import RequireAdmin from './Pages/Login/Login/RequireAdmin';
 import AddProduct from './Pages/DashBoard/AddProduct';
+import ManageProducts from './Pages/DashBoard/ManageProducts';
 
 
 
@@ -63,6 +64,9 @@ function App() {
           </RequireAdmin>}></Route>
           <Route path="addproduct" element={<RequireAdmin>
             <AddProduct />
+          </RequireAdmin>}></Route>
+          <Route path="manageproduct" element={<RequireAdmin>
+            <ManageProducts />
           </RequireAdmin>}></Route>
 
         </Route>

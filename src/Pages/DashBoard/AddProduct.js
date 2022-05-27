@@ -12,6 +12,7 @@ const AddProduct = () => {
         fetch(`http://localhost:5000/product`, {
             method: 'POST',
             headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`,
                 'content-type': 'application/json'
             },
             body: JSON.stringify(data)
@@ -44,7 +45,7 @@ const AddProduct = () => {
                         <input className='mb-2 input input-ghost w-full max-w-xs bg-white' placeholder='Quantity Available ' type="number" {...register("quantity")} />
 
 
-                        <input className='mb-2 input input-ghost w-full max-w-xs bg-white' placeholder='order Minimum quantity bg-white' type="number" {...register("orderMinimum")} />
+                        <input className='mb-2 input input-ghost w-full max-w-xs bg-white' placeholder='order Minimum quantity' type="number" {...register("orderMinimum")} />
 
                         <input className='mb-2 input input-ghost w-full max-w-xs bg-white' placeholder='Price' type="number" {...register("price")} />
 
